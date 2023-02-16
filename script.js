@@ -10,7 +10,9 @@ function fillShape(id) {
         currentShape = 'cross';
     }
     fields[id] = currentShape;
+    console.log(fields);
     draw();
+    checkForWin();
 }
 
 function draw() {
@@ -63,6 +65,5 @@ function checkForWin() {
     if (winner) {
         console.log('gewonnen', winner);
     }
-
 }
 
