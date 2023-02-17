@@ -3,20 +3,21 @@ let fields = [];
 let currentShape = 'cross';
 
 function fillShape(id) {
-
-    if (currentShape == 'cross') {
-        currentShape = 'circle';
-        document.getElementById('player-1').classList.add('player-inactive');
-        document.getElementById('player-2').classList.remove('player-inactive');
-    } else {
-        currentShape = 'cross';
-        document.getElementById('player-1').classList.remove('player-inactive');
-        document.getElementById('player-2').classList.add('player-inactive');
+    if (!fields[id]) {
+        if (currentShape == 'cross') {
+            currentShape = 'circle';
+            document.getElementById('player-1').classList.add('player-inactive');
+            document.getElementById('player-2').classList.remove('player-inactive');
+        } else {
+            currentShape = 'cross';
+            document.getElementById('player-1').classList.remove('player-inactive');
+            document.getElementById('player-2').classList.add('player-inactive');
+        }
+        fields[id] = currentShape;
+        console.log(fields);
+        draw();
+        checkForWin();
     }
-    fields[id] = currentShape;
-    console.log(fields);
-    draw();
-    checkForWin();
 }
 
 function draw() {
@@ -36,6 +37,7 @@ function checkForWin() {
 
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
         winner = fields[0];
+        document.getElementById('line-0').style.transform = 'scaleX(2)';
     }
 
     if (fields[3] == fields[4] && fields[4] == fields[5] && fields[3]) {
