@@ -12,21 +12,22 @@
 
 <body>
 
+    <img src="img/gameover.png" alt="" class="gameover d-none" id="gameover">
+
     <div class="player-panel">
         <div class="player-one" id="player-1"><img src="img/circle.png">Player 1</div>
         <div class="player-two player-inactive" id="player-2"><img src="img/cross.png">Player 2</div>
     </div>
-    
+
     <div class="game">
         <div id="line-0" class="horizontal-line" style="top: 345px; left: 24px; transform: scaleX(0.0)"></div>
         <div id="line-1" class="horizontal-line" style="top: 205px; left: 24px; transform: scaleX(0.0)"></div>
         <div id="line-2" class="horizontal-line" style="top: 68px; left: 24px; transform: scaleX(0.0)"></div>
-        <div id="line-3" class="horizontal-line" style="top: 205px; left: -123px; transform: scaleX(0.0)"></div>
+        <div id="line-3" class="horizontal-line" style="top: 205px; left: -115px; transform: scaleX(0.0)"></div>
         <div id="line-4" class="horizontal-line" style="top: 205px; left: 25px; transform: scaleX(0.0)"></div>
         <div id="line-5" class="horizontal-line" style="top: 205px; left: 163px; transform: scaleX(0.0)"></div>
         <div id="line-6" class="horizontal-line" style="top: 196px; transform: scaleX(0.0); width: 400px;"></div>
         <div id="line-7" class="horizontal-line" style="top: 209px; transform: scaleX(0.0); width: 400px;"></div>
-       
 
         <table>
             <tr>
@@ -73,6 +74,8 @@
             </tr>
         </table>
     </div>
+
+    <button class="d-none gameover-button" id="go-button" onclick="restart()">Nochmal spielen</button>
 </body>
 
 </html>
