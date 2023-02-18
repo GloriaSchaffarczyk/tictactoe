@@ -42,6 +42,10 @@ table {
     border-collapse: collapse;
 }
 
+.game {
+    position: relative;
+}
+
 tr {
     width: 399px;
 }
@@ -91,15 +95,7 @@ tr td:last-child {
 .horizontal-line {
     height: 10px;
     width: 362px;
-    background-color: rgba(0, 128, 0, 0.445);
     position: absolute;
-    transform: scaleX(0.0);
-    transform: scaleY(0.0);
-    transition: transform 225ms ease-in-out;
-}
-
-.make-vertical {
-    transform: rotate(90deg);
-    transform: scaleX(0.0);
+    background-color: rgba(0, 128, 0, 0.445);
     transition: transform 225ms ease-in-out;
 }
