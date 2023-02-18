@@ -135,7 +135,7 @@ tr td:last-child {
 
 .gameover-button:focus {
     outline: none;
-  }
+}
 
 @keyframes zoomIn {
     from {

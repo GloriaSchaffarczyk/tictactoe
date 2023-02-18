@@ -91,9 +91,14 @@ function restart() {
     document.getElementById('gameover').classList.add('d-none');
     document.getElementById('go-button').classList.add('d-none');
 
-    for (let i = 0; i < 8; i++) {
-        document.getElementById('line-' + i).classList.add('d-none');
-    }
+    document.getElementById('line-0').style="top: 345px; left: 24px; transform: scaleX(0.0)";
+    document.getElementById('line-1').style="top: 205px; left: 24px; transform: scaleX(0.0)";
+    document.getElementById('line-2').style="top: 68px; left: 24px; transform: scaleX(0.0)";
+    document.getElementById('line-3').style="top: 205px; left: -115px; transform: scaleX(0.0)";
+    document.getElementById('line-4').style="top: 205px; left: 25px; transform: scaleX(0.0)";
+    document.getElementById('line-5').style="top: 205px; left: 163px; transform: scaleX(0.0)";
+    document.getElementById('line-6').style="top: 196px; transform: scaleX(0.0); width: 400px;";
+    document.getElementById('line-7').style="top: 209px; transform: scaleX(0.0); width: 400px;";
 
     for (let i = 0; i < 9; i++) {
         document.getElementById('cross-' + i).classList.add('d-none');
